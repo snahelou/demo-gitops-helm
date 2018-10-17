@@ -2,7 +2,7 @@
 apiVersion: helm.integrations.flux.weave.works/v1alpha2
 kind: FluxHelmRelease
 metadata:
-  name: todobackend-rc
+  name: todobackend-prod-rc
   namespace: prod-helm
   annotations:
     flux.weave.works/automated: "true"

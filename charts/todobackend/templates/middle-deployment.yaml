@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: api
+  name: api
+spec:
+  replicas: {{ .Values.api.replicas }}
+  selector:
+    matchLabels:
+      run: api
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: api
+    spec:
+      containers:
+      - image: {{ .Values.api.image }}
+        name: middle
+        imagePullPolicy: 'Always'
+        resources:
+          requests:
+            memory: 256Mi
+            cpu: 200m
+          limits:
+            memory: 256Mi
+            cpu: 200m
+        imagePullPolicy: 'Always'
+        resources:
+          requests:
+            memory: 256Mi
+            cpu: 100m
+          limits:
+            memory: 256Mi
+            cpu: 100m
+        livenessProbe:
+          httpGet:
+            path: /todos
+            port: 8082
+            scheme: HTTP
+          initialDelaySeconds: 30
+          timeoutSeconds: 2
+        readinessProbe:
+          httpGet:
+            path: /todos
+            port: 8082
+            scheme: HTTP
+          initialDelaySeconds: 10
+          timeoutSeconds: 2
+      imagePullSecrets:
+      - name: regcred
+status: {}

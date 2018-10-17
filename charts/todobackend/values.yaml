@@ -1,0 +1,12 @@
+# Default values for todobackend.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+
+front:
+  image: repo.treescale.com/snahelou22/frontend:0.1.12
+  replicas: 2
+
+api:
+  image: repo.treescale.com/snahelou22/middleware:0.1.14
+  replicas: 2

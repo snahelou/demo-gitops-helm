@@ -9,7 +9,7 @@ metadata:
     flux.weave.works/tag.chart-image: glob:1.1.*
 spec:
   chartGitPath: todobackend
-  releaseName: todobackend-rc
+  releaseName: todobackend-prod-rc
   values:
     api:
       image: repo.treescale.com/snahelou22/middleware:1.1.23

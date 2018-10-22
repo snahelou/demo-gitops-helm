@@ -16,5 +16,5 @@ spec:
       image: repo.treescale.com/snahelou22/middleware:1.1.25
       replicas: 2
     front:
-      image: repo.treescale.com/snahelou22/frontend:1.1.25
+      image: repo.treescale.com/snahelou22/frontend:1.1.28
       replicas: 2

@@ -13,7 +13,7 @@ spec:
   releaseName: todobackend-rc
   values:
     api:
-      image: repo.treescale.com/snahelou22/middleware:0.1.27
+      image: repo.treescale.com/snahelou22/middleware:0.1.28
       replicas: 1
     front:
       image: repo.treescale.com/snahelou22/frontend:0.1.27

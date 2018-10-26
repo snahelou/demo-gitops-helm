@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: frontend
+  name: frontend
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      run: frontend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: frontend
+    spec:
+      containers:
+      - image: repo.treescale.com/snahelou22/frontend:1.1.25
+        name: frontend
+        imagePullPolicy: 'Always'
+      imagePullSecrets:
+      - name: regcred

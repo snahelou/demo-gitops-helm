@@ -1,0 +1,20 @@
+---
+apiVersion: helm.integrations.flux.weave.works/v1alpha2
+kind: FluxHelmRelease
+metadata:
+  name: todobackend-prod-rc
+  namespace: prod-helm
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.api: "glob:1.1.*"
+    flux.weave.works/tag.front: "glob:1.1.*"
+spec:
+  chartGitPath: todobackend
+  releaseName: todobackend-prod-rc
+  values:
+    api:
+      image: repo.treescale.com/snahelou22/middleware:1.1.25
+      replicas: 2
+    front:
+      image: repo.treescale.com/snahelou22/frontend:1.1.28
+      replicas: 2

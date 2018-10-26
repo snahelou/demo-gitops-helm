@@ -1,0 +1,5 @@
+middle:
+  enabled: true
+  replicas: 2
+  image: 
+    name: repo.treescale.com/snahelou22/middleware:0.1.13

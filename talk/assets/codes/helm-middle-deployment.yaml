@@ -1,0 +1,49 @@
+{{- if .Values.middle.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: api
+  name: api
+spec:
+  replicas: {{ .Values.middle.replicas }}
+  selector:
+    matchLabels:
+      run: api
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: api
+    spec:
+      containers:
+      - image: {{ .Values.middle.image.name }}
+        name: middle
+        imagePullPolicy: 'Always'
+        resources:
+          requests:
+            memory: 256Mi
+            cpu: 100m
+          limits:
+            memory: 256Mi
+            cpu: 100m
+        livenessProbe:
+          httpGet:
+            path: /todos
+            port: 8082
+            scheme: HTTP
+          initialDelaySeconds: 30
+          timeoutSeconds: 2
+        readinessProbe:
+          httpGet:
+            path: /todos
+            port: 8082
+            scheme: HTTP
+          initialDelaySeconds: 10
+          timeoutSeconds: 2
+      imagePullSecrets:
+      - name: regcred
+status: {}
+{{- end }}

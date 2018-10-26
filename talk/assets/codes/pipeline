@@ -1,0 +1,21 @@
+node {
+  stage ('Checkout') {
+    checkout scm
+  }
+
+  // CI...
+
+  stage ('Deploy') {
+    withCredentials(
+      [kubeconfigContent(credentialsId: 'admin', variable: 'KUBECONFIG_CONTENT')])
+    {
+      docker.image('kubetool').inside {
+        writeFile file: "kubeconfig", text: "$KUBECONFIG_CONTENT"
+        sh """KUBECONFIG=kubeconfig helm upgrade \
+            --install release todobackend -n=dev-todobackend \
+            --set deployment.image.tag="${env.BUILD_NUMBER}"""
+
+      }
+    }
+  }
+}

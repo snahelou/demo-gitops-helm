@@ -1,0 +1,9 @@
+code {
+  color: white;
+}
+
+.spectacle-content pre + div {
+  border: 1px solid white;
+  background-color: #3c3b3b !important;
+  font-size: larger;
+}

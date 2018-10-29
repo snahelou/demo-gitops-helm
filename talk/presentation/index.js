@@ -44,8 +44,9 @@ const images = {
   k8s: require("../assets/images/kubernetes.png"),
   pipeline: require("../assets/images/pipeline.png"),
   todobackend: require("../assets/images/todobackend.png"),
-  todobackendgitops: require("../assets/images/todobackend-gitops.png"),
+  todobackendgitops: require("../assets/images/gitops.svg"),
   dieux: require("../assets/images/dieux.png"),
+  tree: require("../assets/images/chart.png"),
   pipeline2: require("../assets/images/typical-pipeline.png"),
   nope: require("../assets/images/maxresdefault.jpg"),
   cipipeline: require("../assets/images/CI_pipeline.png"),
@@ -84,7 +85,10 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
 
-        <Slide transition={["fade"]} bgImage="https://landscape.cncf.io/images/landscape.png" >
+        <Slide transition={["fade"]}
+          bgSize="85%"
+          bgRepeat="no-repeat"
+          bgImage="https://landscape.cncf.io/images/landscape.png" >
           <Notes>
             <br/>Focus sur Application definion / Continuous integration et Scheduling orchestration.
           </Notes>
@@ -97,7 +101,7 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Teamwork and Collaboration</ListItem></Appear>
             <Appear><ListItem>Reduced risks and costs of development</ListItem></Appear>
             <Appear><ListItem>Rapid feedback</ListItem></Appear>
-            <Appear><ListItem>Ability to rollback</ListItem></Appear>
+            <Appear><ListItem>Fail-fast</ListItem></Appear>
             <Appear><ListItem>End-to-end security</ListItem></Appear>
           </List>
         </Slide>
@@ -149,7 +153,7 @@ export default class Presentation extends React.Component {
 
         <Slide
           transition={["fade"]}
-          bgSize="60%"
+          bgSize="68%"
           bgRepeat="no-repeat"
           bgImage={getImage("todobackendgitops")}
         >
@@ -165,7 +169,7 @@ export default class Presentation extends React.Component {
           transition={["fade"]}
           lang="jsx"
           textSize=".775em"
-          code={require("raw-loader!../assets/codes/middle-deployment.yaml")}
+          code={require("raw-loader!../assets/codes/middle-deployment-yaml")}
           ranges={[
             {
               loc: [0, 2],
@@ -193,7 +197,7 @@ export default class Presentation extends React.Component {
           transition={["fade"]}
           lang="jsx"
           textSize=".775em"
-          code={require("raw-loader!../assets/codes/middle-service.yaml")}
+          code={require("raw-loader!../assets/codes/middle-service-yaml")}
           ranges={[
             {
               loc: [0, 2],
@@ -245,22 +249,24 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={["fade"]}>
+        <Slide transition={["fade"]} style="padding:unset">
           <Heading caps textFont="primary" textColor="secondary">Helm chart</Heading>
-          <List>
+          <List style="display: inline-block;vertical-align:center;margin-top: 160px;">
             <ListItem>Metadatas</ListItem>
             <ListItem>K8S Templates</ListItem>
             <ListItem>Default values</ListItem>
             <ListItem>Dependencies</ListItem>
             <ListItem>Documentation</ListItem>
           </List>
+          <Image src={getImage("tree")}  style="margin-top: 60px;margin-left: 60px;display: inline-block;vertical-align:top;width:50%"/>
+
         </Slide>
 
         <CodeSlide
           transition={["fade"]}
           lang="jsx"
           textSize=".775em"
-          code={require("raw-loader!../assets/codes/helm-middle-deployment.yaml")}
+          code={require("raw-loader!../assets/codes/helm-middle-deployment-yaml")}
           ranges={[
             {
               loc: [0, 1],
@@ -278,7 +284,7 @@ export default class Presentation extends React.Component {
           transition={["fade"]}
           lang="jsx"
           textSize=".775em"
-          code={require("raw-loader!../assets/codes/values.yaml")}
+          code={require("raw-loader!../assets/codes/values-yaml")}
           ranges={[
             {
               loc: [0, 100],
@@ -428,7 +434,7 @@ export default class Presentation extends React.Component {
             transition={["fade"]}
             lang="jsx"
             textSize=".775em"
-            code={require("raw-loader!../assets/codes/prod.yaml")}
+            code={require("raw-loader!../assets/codes/prod-yaml")}
             ranges={[
               {
                 loc: [1, 3],

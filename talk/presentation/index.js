@@ -38,6 +38,8 @@ const theme = createTheme(
     secondary: "Helvetica"
   }
 );
+
+
 import "./index.css";
 
 const images = {
@@ -309,8 +311,11 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
 
-        <Slide transition={["fade"]}>
-          <Image src={getImage("pipeline2")} margin="16px auto" style="display: inline-block;width:200%;vertical-align:middle;border:0px;background-color:#D211D8;box-shadow:0 0 0px"/>
+        <Slide transition={["fade"]}
+          bgImage={getImage("pipeline2")}
+          bgSize="80%"
+          bgRepeat="no-repeat"
+          >
           <Notes>
             <br/> Pas de piege, combien d'entre vous ont se genre de pipeline?
             <br/>
@@ -339,7 +344,7 @@ export default class Presentation extends React.Component {
 
         <Slide
           transition={["fade"]}
-          bgSize="110%"
+          bgSize="100%"
           bgRepeat="no-repeat"
           bgImage={getImage("nope")}
         />
@@ -384,7 +389,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["fade"]}>
-            <Image src={getImage("cipipeline")} size={1} style="display: inline-block;width:100%; vertical-align:middle;margin-bottom: 30px;margin-top: 0px;border:0px;background: white" />
+            <Image src={getImage("cipipeline")} style="background: white" />
             <List>
               <ListItem textSize="1.2em">How to maintain credentials?</ListItem>
               <ListItem textSize="1.2em">How to rollback without rebuilding?</ListItem>
@@ -393,12 +398,11 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["fade"]}>
-            <Image src={getImage("gitopspipeline")} size={1} style="display: inline-block;vertical-align:middle;margin-bottom: 30px;margin-top: 0px;border:0px;background: white" />
+            <Image src={getImage("gitopspipeline")} style="background: white" />
             <List>
               <Appear><ListItem textSize="1.2em">More secure. No credential.</ListItem></Appear>
               <Appear><ListItem textSize="1.2em">No link between CI & CD.</ListItem></Appear>
-              <Appear><ListItem textSize="1.2em">Faster Mean Time to Deployment</ListItem></Appear>
-              <Appear><ListItem textSize="1.2em">Faster Mean Time to Recovery</ListItem></Appear>
+              <Appear><ListItem textSize="1.2em">Faster Mean Time to Deployment / Recovery</ListItem></Appear>
               <Appear><ListItem textSize="1.2em">Stable and reproducible rollbacks</ListItem></Appear>
             </List>
             <Appear><Link textSize="24px" href="www.weave.works/blog/kubernetes-anti-patterns-let-s-do-gitops-not-ciops">www.weave.works/blog/kubernetes-anti-patterns-let-s-do-gitops-not-ciops</Link></Appear>

@@ -101,7 +101,7 @@ export default class Presentation extends React.Component {
           <List>
             <Appear><ListItem>Time To Market</ListItem></Appear>
             <Appear><ListItem>Teamwork and Collaboration</ListItem></Appear>
-            <Appear><ListItem>Reduced risks and costs of development</ListItem></Appear>
+            <Appear><ListItem>Reduced risks and development costs </ListItem></Appear>
             <Appear><ListItem>Rapid feedback</ListItem></Appear>
             <Appear><ListItem>Fail-fast</ListItem></Appear>
             <Appear><ListItem>End-to-end security</ListItem></Appear>
@@ -233,9 +233,9 @@ export default class Presentation extends React.Component {
 
 
         <Slide transition={["fade"]}>
-          <Heading size={3} caps textFont="primary" textColor="secondary">Whats happend if...</Heading>
+          <Heading size={3} caps textFont="primary" textColor="secondary">What happens if...</Heading>
           <List margin="30px 0 0 0" >
-            <Appear><ListItem margin="20px 0 0 0">I want more scale in production?</ListItem></Appear>
+            <Appear><ListItem margin="20px 0 0 0">I want more replicas in production?</ListItem></Appear>
             <Appear><ListItem margin="20px 0 0 0">I want to change image version?</ListItem></Appear>
             <Appear><ListItem margin="20px 0 0 0">I want to switch from Redis to PGSQL?</ListItem></Appear>
             <Appear><Heading margin="100px 0 0 0" textColor="secondary" size={5} > We need a deployment template! </Heading></Appear>
@@ -256,10 +256,10 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]}>
-          <Heading size={4} caps textFont="primary" textColor="secondary">Managing ressources as a single unit</Heading>
+          <Heading size={4} caps textFont="primary" textColor="secondary">Managing resources as a single unit</Heading>
           <List>
             <ListItem>Customizations</ListItem>
-            <ListItem>Reuse ressources</ListItem>
+            <ListItem>Reuse resources</ListItem>
             <ListItem>Manage app lifecycles</ListItem>
             <ListItem>History</ListItem>
             <ListItem>Rollback</ListItem>
@@ -269,7 +269,7 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} style="padding:unset">
           <Heading caps textFont="primary" textColor="secondary">Helm chart</Heading>
           <List style="display: inline-block;vertical-align:center;margin-top: 160px;">
-            <ListItem>Metadatas</ListItem>
+            <ListItem>Metadata</ListItem>
             <ListItem>K8S Templates</ListItem>
             <ListItem>Default values</ListItem>
             <ListItem>Dependencies</ListItem>
@@ -367,10 +367,10 @@ export default class Presentation extends React.Component {
           <Slide transition={["fade"]}>
             <Heading caps textFont="primary" textColor="secondary">Shit Happens</Heading>
             <List>
-              <Appear><ListItem>Credentials?</ListItem></Appear>
-              <Appear><ListItem>Multiple Git repos?</ListItem></Appear>
-              <Appear><ListItem>Security?</ListItem></Appear>
-              <Appear><ListItem>Recovery?</ListItem></Appear>
+              <Appear><ListItem>Credentials</ListItem></Appear>
+              <Appear><ListItem>Multiple Git repos</ListItem></Appear>
+              <Appear><ListItem>Security</ListItem></Appear>
+              <Appear><ListItem>Recovery</ListItem></Appear>
               <Appear><ListItem>Complexity</ListItem></Appear>
             </List>
             <Notes>
@@ -490,7 +490,7 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["zoom"]} bgColor="primary">
             <Heading fit caps textColor="secondary">
-              Ressources
+              Resources
             </Heading>
             <List style="list-style-position: unset" >
               <ListItem margin="20px 0 0 0" textSize="1em"><Link href="https://helm.sh">helm.sh</Link></ListItem>

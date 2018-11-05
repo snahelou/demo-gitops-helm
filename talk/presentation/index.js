@@ -106,6 +106,16 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Fail-fast</ListItem></Appear>
             <Appear><ListItem>End-to-end security</ListItem></Appear>
           </List>
+          <Notes>
+          <List>
+            <ListItem>Time To Market</ListItem>
+            <ListItem>Teamwork and Collaboration</ListItem>
+            <ListItem>Reduced risks and costs of development</ListItem>
+            <ListItem>Rapid feedback</ListItem>
+            <ListItem>Fail-fast</ListItem>
+            <ListItem>End-to-end security</ListItem>
+          </List>
+          </Notes>
         </Slide>
 
         <Slide
@@ -230,6 +240,11 @@ export default class Presentation extends React.Component {
             <Appear><ListItem margin="20px 0 0 0">I want to switch from Redis to PGSQL?</ListItem></Appear>
             <Appear><Heading margin="100px 0 0 0" textColor="secondary" size={5} > We need a deployment template! </Heading></Appear>
           </List>
+          <Notes>
+            <ListItem margin="20px 0 0 0">I want more scale in production?</ListItem>
+            <ListItem margin="20px 0 0 0">I want to change image version?</ListItem>
+            <ListItem margin="20px 0 0 0">I want to switch from Redis to PGSQL?</ListItem>
+          </Notes>
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="primary">

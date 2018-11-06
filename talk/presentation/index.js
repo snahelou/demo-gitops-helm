@@ -45,8 +45,12 @@ import "./index.css";
 const images = {
   k8s: require("../assets/images/kubernetes.png"),
   pipeline: require("../assets/images/pipeline.png"),
-  todobackend: require("../assets/images/todobackend.png"),
-  todobackendgitops: require("../assets/images/gitops.svg"),
+  todobackendscreen: require("../assets/images/todobackend-screen.png"),
+  todobackend: require("../assets/images/todobackend-gitops.svg"),
+  todobackend4: require("../assets/images/todobackend-10.svg"),
+  todobackend3: require("../assets/images/todobackend-9.svg"),
+  todobackend2: require("../assets/images/todobackend-8.svg"),
+  todobackend1: require("../assets/images/todobackend-7.svg"),
   dieux: require("../assets/images/dieux.png"),
   tree: require("../assets/images/chart.png"),
   pipeline2: require("../assets/images/typical-pipeline.png"),
@@ -160,14 +164,41 @@ export default class Presentation extends React.Component {
           transition={["fade"]}
           bgSize="70%"
           bgRepeat="no-repeat"
-          bgImage={getImage("todobackend")}
+          bgImage={getImage("todobackendscreen")}
         />
 
         <Slide
           transition={["fade"]}
+          bgSize="40%"
+          bgRepeat="no-repeat"
+          bgImage={getImage("todobackend1")}
+        />
+
+        <Slide
+          transition={["fade"]}
+          bgSize="40%"
+          bgRepeat="no-repeat"
+          bgImage={getImage("todobackend2")}
+        />
+
+        <Slide
+          transition={["fade"]}
+          bgSize="40%"
+          bgRepeat="no-repeat"
+          bgImage={getImage("todobackend3")}
+        />
+
+        <Slide
+          transition={["fade"]}
+          bgSize="40%"
+          bgRepeat="no-repeat"
+          bgImage={getImage("todobackend4")}
+        />
+        <Slide
+          transition={["fade"]}
           bgSize="68%"
           bgRepeat="no-repeat"
-          bgImage={getImage("todobackendgitops")}
+          bgImage={getImage("todobackend")}
         >
           <Notes>
             <br/> Présentation repo Git

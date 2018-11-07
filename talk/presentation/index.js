@@ -44,6 +44,7 @@ import "./index.css";
 
 const images = {
   k8s: require("../assets/images/kubernetes.png"),
+  demo: require("../assets/images/demo.png"),
   pipeline: require("../assets/images/pipeline.png"),
   todobackendscreen: require("../assets/images/todobackend-screen.png"),
   todobackend: require("../assets/images/todobackend-gitops.svg"),
@@ -343,9 +344,9 @@ export default class Presentation extends React.Component {
 
         <Slide
           transition={["fade"]}
-          bgSize="110%"
+          bgSize="60%"
           bgRepeat="no-repeat"
-          bgImage={getImage("dieux")}
+          bgImage={getImage("demo")}
         />
 
         <Slide transition={["zoom"]} bgColor="primary">

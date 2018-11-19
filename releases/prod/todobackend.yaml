@@ -11,8 +11,8 @@ metadata:
 spec:
   releaseName: todobackend-prod-rc
   chart:
-    git: git@github.com/snahelou/demo-gitops-helm
-    path: todobackend
+    git: ssh://git@github.com/snahelou/demo-gitops-helm
+    path: charts/todobackend
   values:
     api:
       image: repo.treescale.com/snahelou22/middleware:1.1.25

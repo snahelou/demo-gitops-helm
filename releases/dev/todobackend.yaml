@@ -1,6 +1,6 @@
 ---
-apiVersion: helm.integrations.flux.weave.works/v1alpha2
-kind: FluxHelmRelease
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
 metadata:
   name: todobackend-rc
   namespace: develop-helm
@@ -9,8 +9,10 @@ metadata:
     flux.weave.works/tag.api: "glob:0.1.*"
     flux.weave.works/tag.front: "glob:0.1.*"
 spec:
-  chartGitPath: todobackend
   releaseName: todobackend-rc
+  chart:
+    git: git@github.com/snahelou/demo-gitops-helm
+    path: todobackend
   values:
     api:
       image: repo.treescale.com/snahelou22/middleware:0.1.31
